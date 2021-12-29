@@ -1,28 +1,28 @@
 @font-face {
-  font-family: Assistant;
+  font-family: Montserrat;
   font-display: swap;
-  src: url("../fonts/Assistant-Bold.woff2") format("woff2"), url("../fonts/Assistant-Bold.woff") format("woff");
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: Assistant;
+  font-family: Montserrat;
   font-display: swap;
-  src: url("../fonts/Assistant-ExtraBold.woff2") format("woff2"), url("../fonts/Assistant-ExtraBold.woff") format("woff");
+  src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
 @font-face {
-  font-family: Assistant;
+  font-family: Montserrat;
   font-display: swap;
-  src: url("../fonts/Assistant-Regular.woff2") format("woff2"), url("../fonts/Assistant-Regular.woff") format("woff");
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: Assistant;
+  font-family: Montserrat;
   font-display: swap;
-  src: url("../fonts/Assistant-SemiBold.woff2") format("woff2"), url("../fonts/Assistant-SemiBold.woff") format("woff");
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
@@ -108,7 +108,7 @@ address {
 }
 
 body {
-  font-family: "Assistant", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.42;
@@ -184,5 +184,6 @@ a {
 }
 .menu__link {
   font-weight: 800;
+  color: #9E9E9E;
   text-transform: uppercase;
 }
