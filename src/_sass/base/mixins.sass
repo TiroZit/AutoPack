@@ -1,5 +1,5 @@
 $maxWidth: 1920
-$maxWidthContainer: 1190
+$maxWidthContainer: 1320
 @mixin responsive ($property, $startSize, $minSize, $type)
   $addSize: $startSize - $minSize
   @if $type==1
@@ -20,3 +20,36 @@ $maxWidthContainer: 1190
   max-width: #{$max-width}
   padding: 0 #{$padding}
   margin: 0 auto
+
+@mixin burger()
+  .burger
+    display: none
+    @media(max-width: em(992))
+      display: block
+      position: relative
+      z-index: 3
+      width: 35px
+      height: 20px
+      background-color: transparent
+      span
+        position: absolute
+        top: calc( 50% - 1px )
+        left: 0
+        width: 100%
+        height: 2px
+        background-color: var(--orange)
+        transition: .3s
+        &:first-child
+          top: 0
+        &:last-child
+          top: auto
+          bottom: 0
+      &.open
+        span
+          transform: scale(0)
+          &:first-child
+            top: calc( 50% - 1px )
+            transform: rotate(-45deg)
+          &:last-child
+            bottom: calc( 50% - 1px )
+            transform: rotate(45deg)

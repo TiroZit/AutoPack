@@ -1,27 +1,41 @@
 .header
-  margin: 45px 0
+  margin: 40px 0
+  @media(max-width: em(992))
+    margin: 20px 0
   &__container
     display: flex
+    justify-content: space-between
+    @media(max-width: em(992))
+      justify-content: flex-start
     align-items: center
   &__phone
     font-size: rem(20)
     color: var(--orange)
     padding: 20px
     border: 1px solid var(--orange)
+    @media(max-width: em(992))
+      font-size: rem(16)
+      padding: 15px
+      margin-right: 20px
 .logo
   font-size: rem(44)
   font-weight: 800
   letter-spacing: -1.85714px
   color: var(--black)
+  @media(max-width: em(992))
+    flex-grow: 1
+    font-size: rem(36)
 .menu
   flex-grow: 1
-  margin-left: 70px
+  color: var(--sgray)
+  @include responsive("margin-left", 70, 20, 0)
   margin-right: 20px
+  @media(max-width: em(992))
+    display: none
   &__list
     display: flex
     align-items: center
-    gap: 60px
+    @include responsive("gap", 60, 20, 0)
   &__link
-    font-weight: 800
-    color: #9E9E9E
+    font-weight: 700
     text-transform: uppercase

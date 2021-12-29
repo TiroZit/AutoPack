@@ -2,6 +2,11 @@ import * as Functions from './modules/functions.js';
 
 Functions.isWebp();
 
+import * as Burger from './modules/burger.js';
+
+Burger.burger();
+
+
 //Tabbis https://github.com/jenstornell/tabbis.js
 // import * as Tabs from './modules/tabbis.es6.js';
 // Tabs.Tabs();
@@ -10,10 +15,10 @@ Functions.isWebp();
 // Modal.Modal();
 
 // SWIPER
-// import Swiper, { Navigation, Pagination } from 'swiper';
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
+import Swiper, { Navigation, Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 //sliders.sliderMain();
 

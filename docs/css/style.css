@@ -104,6 +104,7 @@ address {
   --white: #fff;
   --black: #000;
   --gray: #5E5E5E;
+  --sgray: #9E9E9E;
   --orange: #FF9700;
 }
 
@@ -111,7 +112,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.42;
+  line-height: 1.2;
   background: var(--white);
   color: var(--gray);
 }
@@ -151,18 +152,77 @@ a {
   outline: none;
 }
 
+.burger {
+  display: none;
+}
+@media (max-width: 62em) {
+  .burger {
+    display: block;
+    position: relative;
+    z-index: 3;
+    width: 35px;
+    height: 20px;
+    background-color: transparent;
+  }
+  .burger span {
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--orange);
+    transition: 0.3s;
+  }
+  .burger span:first-child {
+    top: 0;
+  }
+  .burger span:last-child {
+    top: auto;
+    bottom: 0;
+  }
+  .burger.open span {
+    transform: scale(0);
+  }
+  .burger.open span:first-child {
+    top: calc(50% - 1px);
+    transform: rotate(-45deg);
+  }
+  .burger.open span:last-child {
+    bottom: calc(50% - 1px);
+    transform: rotate(45deg);
+  }
+}
+
 .header {
-  margin: 45px 0;
+  margin: 40px 0;
+}
+@media (max-width: 62em) {
+  .header {
+    margin: 20px 0;
+  }
 }
 .header__container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 62em) {
+  .header__container {
+    justify-content: flex-start;
+  }
 }
 .header__phone {
   font-size: 1.25rem;
   color: var(--orange);
   padding: 20px;
   border: 1px solid var(--orange);
+}
+@media (max-width: 62em) {
+  .header__phone {
+    font-size: 1rem;
+    padding: 15px;
+    margin-right: 20px;
+  }
 }
 
 .logo {
@@ -171,19 +231,30 @@ a {
   letter-spacing: -1.85714px;
   color: var(--black);
 }
+@media (max-width: 62em) {
+  .logo {
+    flex-grow: 1;
+    font-size: 2.25rem;
+  }
+}
 
 .menu {
   flex-grow: 1;
-  margin-left: 70px;
+  color: var(--sgray);
+  margin-left: calc(20px + 50 * ((100vw - 320px) / 1600));
   margin-right: 20px;
+}
+@media (max-width: 62em) {
+  .menu {
+    display: none;
+  }
 }
 .menu__list {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: calc(20px + 40 * ((100vw - 320px) / 1600));
 }
 .menu__link {
-  font-weight: 800;
-  color: #9E9E9E;
+  font-weight: 700;
   text-transform: uppercase;
 }
