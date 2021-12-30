@@ -1,10 +1,11 @@
 import * as Functions from './modules/functions.js';
-
 Functions.isWebp();
 
 import * as Burger from './modules/burger.js';
-
 Burger.burger();
+
+// import * as Dynamic from './modules/dynamic-responsive.js';
+// Dynamic.dynamic();
 
 
 //Tabbis https://github.com/jenstornell/tabbis.js

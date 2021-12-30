@@ -49,14 +49,18 @@ aside {
 html,
 body {
   height: 100%;
-  width: 100%;
+  min-width: 320px;
 }
 
 button {
-  font-family: inherit;
-  font-size: inherit;
   cursor: pointer;
   color: inherit;
+  background-color: inherit;
+}
+
+button, input, textarea {
+  font-family: Montserrat;
+  font-size: inherit;
 }
 
 a,
@@ -90,12 +94,6 @@ img:not([src]):not([srcset]) {
   visibility: hidden;
 }
 
-input,
-textarea {
-  font-family: inherit;
-  padding: 10px;
-}
-
 address {
   font-style: unset;
 }
@@ -112,7 +110,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1;
   background: var(--white);
   color: var(--gray);
 }
@@ -162,7 +160,6 @@ a {
     z-index: 3;
     width: 35px;
     height: 20px;
-    background-color: transparent;
   }
   .burger span {
     position: absolute;
@@ -180,14 +177,14 @@ a {
     top: auto;
     bottom: 0;
   }
-  .burger.open span {
+  .burger.active span {
     transform: scale(0);
   }
-  .burger.open span:first-child {
+  .burger.active span:first-child {
     top: calc(50% - 1px);
     transform: rotate(-45deg);
   }
-  .burger.open span:last-child {
+  .burger.active span:last-child {
     bottom: calc(50% - 1px);
     transform: rotate(45deg);
   }
@@ -219,9 +216,15 @@ a {
 }
 @media (max-width: 62em) {
   .header__phone {
+    z-index: 5;
     font-size: 1rem;
     padding: 15px;
     margin-right: 20px;
+  }
+}
+@media (max-width: 23.4375em) {
+  .header__phone {
+    display: none;
   }
 }
 
@@ -233,6 +236,7 @@ a {
 }
 @media (max-width: 62em) {
   .logo {
+    z-index: 5;
     flex-grow: 1;
     font-size: 2.25rem;
   }
@@ -246,7 +250,21 @@ a {
 }
 @media (max-width: 62em) {
   .menu {
-    display: none;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    background-color: #413659;
+    width: 100%;
+    margin: 0;
+    margin-top: -20px;
+    padding: 100px 20px 30px 20px;
+    height: 100vh;
+    transition: 0.5s;
+    visibility: hidden;
+  }
+  .menu.open {
+    right: 0;
+    visibility: visible;
   }
 }
 .menu__list {
@@ -254,7 +272,19 @@ a {
   align-items: center;
   gap: calc(20px + 40 * ((100vw - 320px) / 1600));
 }
+@media (max-width: 62em) {
+  .menu__list {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
 .menu__link {
   font-weight: 700;
   text-transform: uppercase;
+}
+@media (max-width: 62em) {
+  .menu__link {
+    font-size: 1.25rem;
+    padding: 20px;
+  }
 }

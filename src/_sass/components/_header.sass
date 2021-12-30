@@ -14,15 +14,19 @@
     padding: 20px
     border: 1px solid var(--orange)
     @media(max-width: em(992))
+      z-index: 5
       font-size: rem(16)
       padding: 15px
       margin-right: 20px
+    @media(max-width: em(375))
+      display: none
 .logo
   font-size: rem(44)
   font-weight: 800
   letter-spacing: -1.85714px
   color: var(--black)
   @media(max-width: em(992))
+    z-index: 5
     flex-grow: 1
     font-size: rem(36)
 .menu
@@ -31,11 +35,30 @@
   @include responsive("margin-left", 70, 20, 0)
   margin-right: 20px
   @media(max-width: em(992))
-    display: none
+    position: absolute
+    top: 0
+    right: -100%
+    background-color: #413659
+    width: 100%
+    margin: 0
+    margin-top: -20px
+    padding: 100px 20px 30px 20px
+    height: 100vh
+    transition: .5s
+    visibility: hidden
+    &.open
+      right: 0
+      visibility: visible
   &__list
     display: flex
     align-items: center
     @include responsive("gap", 60, 20, 0)
+    @media(max-width: em(992))
+      flex-direction: column
+      gap: 50px
   &__link
     font-weight: 700
     text-transform: uppercase
+    @media(max-width: em(992))
+      font-size: rem(20)
+      padding: 20px

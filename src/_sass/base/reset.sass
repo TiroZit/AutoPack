@@ -18,13 +18,16 @@ aside
 html,
 body
   height: 100%
-  width: 100%
+  min-width: 320px
 
 button
-  font-family: inherit
-  font-size: inherit
   cursor: pointer
   color: inherit
+  background-color: inherit
+
+button,input,textarea
+  font-family: Montserrat
+  font-size: inherit
 
 a,
 a:visited
@@ -51,11 +54,6 @@ img
 
 img:not([src]):not([srcset])
   visibility: hidden
-
-input,
-textarea
-  font-family: inherit
-  padding: 10px
 
 address
   font-style: unset
