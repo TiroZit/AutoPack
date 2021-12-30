@@ -20,6 +20,7 @@
     "gulp-autoprefixer": "latest",
     "gulp-clean-css": "latest",
     "gulp-fonter": "latest",
+    "gulp-group-css-media-queries": "^1.2.2",
     "gulp-htmlmin": "latest",
     "gulp-if": "latest",
     "gulp-imagemin": "latest",
@@ -48,14 +49,14 @@
     "webpack-stream": "latest"
   },
   "dependencies": {
-    "swiper": "latest",
-    "vanilla-lazyload": "latest",
-    "nouislider": "latest",
-    "aos": "latest",
-    "simplebar": "latest",
-    "choices.js": "latest",
-    "accordion-js": "latest",
     "@fancyapps/ui": "latest",
-    "focus-visible": "latest"
+    "accordion-js": "latest",
+    "aos": "latest",
+    "choices.js": "latest",
+    "focus-visible": "latest",
+    "nouislider": "latest",
+    "simplebar": "latest",
+    "swiper": "latest",
+    "vanilla-lazyload": "latest"
   }
 }

@@ -5,7 +5,7 @@ import rename from 'gulp-rename';
 import cleanCss from 'gulp-clean-css';// Сжатие
 import webpcss from 'gulp-webpcss';// Вывод webp изображений
 import autoprefixer from 'gulp-autoprefixer';
-// import groupCssMediaQueries from 'gulp-group-css-media-queries';// Группировка медиа запросов
+import groupCssMediaQueries from 'gulp-group-css-media-queries';// Группировка медиа запросов
 
 const scss = gulpSass(dartSass);
 
@@ -22,12 +22,12 @@ export const sass = () => {
     .pipe(scss({
       outputStyle: 'expanded'
     }))
-    // .pipe(
-    //   app.plugins.if(
-    //     app.isBuild,
-    //     groupCssMediaQueries()
-    //   )
-    // )
+    .pipe(
+      app.plugins.if(
+        app.isBuild,
+        groupCssMediaQueries()
+      )
+    )
     .pipe(
       app.plugins.if(
         app.isBuild,
