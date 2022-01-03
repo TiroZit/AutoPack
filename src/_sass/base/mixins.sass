@@ -21,15 +21,16 @@ $maxWidthContainer: 1320
   padding: 0 #{$padding}
   margin: 0 auto
 
-@mixin burger()
+// @include burger(35, 20, 992)
+@mixin burger($width, $height, $media-max-width)
   .burger
     display: none
-    @media(max-width: em(992))
+    @media(max-width: em($media-max-width))
       display: block
       position: relative
       z-index: 3
-      width: 35px
-      height: 20px
+      width: #{$width}px
+      height: #{$height}px
       span
         position: absolute
         top: calc( 50% - 1px )

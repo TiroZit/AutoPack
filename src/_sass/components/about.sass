@@ -1,0 +1,77 @@
+.about
+  &__container
+  &__wrapper-top
+    display: flex
+    justify-content: space-between
+    min-width: 0
+  &__block-text
+    display: flex
+    justify-content: center
+    flex-direction: column
+    flex-basis: 519px
+    gap: 32px
+  &__text
+    font-weight: 700
+    line-height: 1.5
+    text-transform: uppercase
+    color: var(--sgray)
+  &__title
+    font-size: rem(48)
+    font-weight: 700
+    letter-spacing: -1.85714px
+    line-height: 1.25
+    color: var(--black)
+  &-slider 
+    width: 776px
+    height: 487px
+    &.swiper
+      margin-right: -70px
+    &__wrapper
+    &__slide
+    &__pagination
+      left: 30px
+      bottom: 30px
+    .swiper-pagination-bullet
+      width: 100px
+      height: 4px
+      border-radius: unset
+      background: var(--white)
+      opacity: 1
+      &.swiper-pagination-bullet-active
+        background: var(--orange)
+  &__items
+    display: grid
+    grid-template-columns: repeat(auto-fill,minmax(444px,1fr))
+    column-gap: 25px
+    margin-top: 60px
+  &__item
+    padding: 28px
+    background: #fbfbfb
+    &-text
+      margin-left: 32px
+    &-title
+      font-size: rem(32)
+      font-weight: 700
+      max-width: 354px
+      color: #151515
+    &-subtitle
+      font-size: rem(22)
+      margin-top: 8px
+  &__block-top
+    display: flex
+  &__list
+    display: grid
+    grid-template-columns: repeat(auto-fill,minmax(220px,1fr))
+    margin-top: 34px
+    gap: 35px 40px
+    &-item
+      display: flex
+      align-items: center
+      font-size: rem(22)
+      &>.checked
+        margin-right: 16px
+  &__block-bottom
+    margin-top: 34px
+    font-size: rem(20)
+    &>.scale
+      margin: 0 15px

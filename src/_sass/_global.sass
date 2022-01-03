@@ -32,4 +32,14 @@ a
 .js-focus-visible :focus:not(.focus-visible)
   outline: none
 
-@include burger()
+@include burger(35, 20, 992)
+
+.btn-submit
+  display: block
+  width: fit-content
+  font-weight: 600
+  padding: 20px 25px
+  color: var(--white)!important
+  background: var(--orange)
+  &>.arrow
+    margin-left: 10px

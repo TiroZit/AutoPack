@@ -1,0 +1,56 @@
+section.about 
+  .about__container 
+    .about__wrapper-top 
+      .about__block-text 
+        p.about__text
+          |специализирующаяся на производстве 
+          br
+          |комбинированных 
+          br
+          |материалов из бумаги и полиэтилена
+        h1.about__title 
+          |Производственная Компания
+          br
+          |ООО «АвтоПак»
+        a.btn-submit(href="#") 
+          |Оставить заявку
+          +svg('arrow', '20', '14', 'currentColor')
+      .about-slider.swiper
+        .about-slider__wrapper.swiper-wrapper
+          .about-slider__slide.swiper-slide
+            img(src='@img/about-slider/1.jpg', alt='',)
+          .about-slider__slide.swiper-slide
+            img(src='@img/about-slider/1.jpg', alt='',)
+          .about-slider__slide.swiper-slide
+            img(src='@img/about-slider/1.jpg', alt='',)
+        .about-slider__pagination.swiper-pagination
+    .about__items 
+      .about__item(style='border-top: 4px solid #df0d25')
+        .about__block-top 
+          +svg('paper', '56', '56', '#DF0D25')
+          .about__item-text 
+            .about__item-title Ламинированная бумага
+            .about__item-subtitle в листах и рулонах различных размеров
+        ul.about__list 
+          li.about__list-item 
+            +svg('checked', '32', '32', '#DF0D25')
+            |Односторонняя
+          li.about__list-item 
+            +svg('checked', '32', '32', '#DF0D25')
+            |С печатью
+          li.about__list-item 
+            +svg('checked', '32', '32', '#DF0D25')
+            |Двусторонняя
+          li.about__list-item 
+            +svg('checked', '32', '32', '#DF0D25')
+            |Резанная
+      .about__item(style='border-top: 4px solid #0071d8;')
+        .about__block-top 
+          +svg('membrane', '56', '62', '#0071D8')
+          .about__item-text 
+            .about__item-title Полиэтиленовая пленка
+            .about__item-subtitle различной толщины
+        .about__block-bottom 
+          |От 0.3 метра
+          +svg('scale', '286', '15', '#0071D8')
+          |До 5 метров

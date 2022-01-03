@@ -16,12 +16,24 @@ Burger.burger();
 // Modal.Modal();
 
 // SWIPER
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Autoplay, Navigation, Pagination } from 'swiper';
 //import 'swiper/css';
 //import 'swiper/css/navigation';
 //import 'swiper/css/pagination';
-
-//sliders.sliderMain();
+Swiper.use([Navigation, Pagination, Autoplay]);
+const sliderAbout = new Swiper('.about-slider', {
+  grabCursor: true,
+  loop: true,// Ьесконечный прокрут
+  speed: 500,
+  slidesPerView: '1',// Кол-во слайдов
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  autoplay: {
+    delay: 5000,
+  },
+});
 
 // LAZY-LOADING
 // import lazyLoad from "vanilla-lazyload";
