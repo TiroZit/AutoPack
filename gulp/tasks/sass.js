@@ -20,6 +20,7 @@ export const sass = () => {
     .pipe(bulkSass())
     .pipe(app.plugins.replace(/@img\//g, '../img/'))
     .pipe(scss({
+      includePaths: ['node_modules'],
       outputStyle: 'expanded'
     }))
     .pipe(
