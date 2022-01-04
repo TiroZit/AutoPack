@@ -16,16 +16,20 @@ Burger.burger();
 // Modal.Modal();
 
 // SWIPER
-import Swiper, { Autoplay, Navigation, Pagination } from 'swiper';
+import Swiper, { Autoplay, Lazy, Navigation, Pagination } from 'swiper';
 //import 'swiper/css';
 //import 'swiper/css/navigation';
 //import 'swiper/css/pagination';
-Swiper.use([Navigation, Pagination, Autoplay]);
+Swiper.use([Navigation, Pagination, Autoplay, Lazy]);
 const sliderAbout = new Swiper('.about-slider', {
   grabCursor: true,
   loop: true,// Ьесконечный прокрут
   speed: 500,
   slidesPerView: '1',// Кол-во слайдов
+  preloadImages: false,// Принудительно загрузить все слайды
+  lazy: {
+    loadPrevNext: true,
+  },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,

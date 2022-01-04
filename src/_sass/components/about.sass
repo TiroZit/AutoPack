@@ -4,12 +4,22 @@
     display: flex
     justify-content: space-between
     min-width: 0
+    @media(max-width: em(992))
+      justify-content: center
+      flex-wrap: wrap
+      gap: 20px
   &__block-text
     display: flex
     justify-content: center
     flex-direction: column
     flex-basis: 519px
+    margin-right: 20px
     gap: 32px
+    @media(max-width: em(992))
+      align-items: center
+      text-align: center
+      flex-basis: auto
+      margin-right: 0
   &__text
     font-weight: 700
     line-height: 1.5
@@ -21,11 +31,22 @@
     letter-spacing: -1.85714px
     line-height: 1.25
     color: var(--black)
+    @media(max-width: em(1024))
+      font-size: rem(42)
+    @media(max-width: em(425))
+      font-size: rem(32)
   &-slider 
-    width: 776px
-    height: 487px
+    width: prc(788, 1320)
+    height: prc(493, 1320)
+    @media(max-width: em(992))
+      width: prc(1188, 1320)
+      height: prc(793, 1320)
+    @media(max-width: em(375))
+      display: none
     &.swiper
       margin-right: -70px
+      @media(max-width: em(1440))
+        margin-right: auto
     &__wrapper
     &__slide
     &__pagination
@@ -41,37 +62,53 @@
         background: var(--orange)
   &__items
     display: grid
-    grid-template-columns: repeat(auto-fill,minmax(444px,1fr))
+    grid-template-columns: repeat(auto-fill,minmax(440px,1fr))
     column-gap: 25px
     margin-top: 60px
+    @media(max-width: em(425))
+      grid-template-columns: repeat(auto-fill,minmax(320px,1fr))
   &__item
-    padding: 28px
+    @include responsive('padding', 28, 10, 0)
     background: #fbfbfb
+    font-size: rem(22)
+    @media(max-width: em(1024))
+      font-size: rem(20)
+    @media(max-width: em(425))
+      font-size: rem(18)
     &-text
       margin-left: 32px
+      @media(max-width: em(425))
+        margin-left: 0
     &-title
       font-size: rem(32)
       font-weight: 700
-      max-width: 354px
       color: #151515
+      @media(max-width: em(1024))
+        font-size: rem(28)
+      @media(max-width: em(425))
+        font-size: rem(26)
     &-subtitle
-      font-size: rem(22)
       margin-top: 8px
   &__block-top
     display: flex
+    @media(max-width: em(425))
+      flex-wrap: wrap
+      justify-content: center
+      text-align: center
   &__list
     display: grid
     grid-template-columns: repeat(auto-fill,minmax(220px,1fr))
     margin-top: 34px
     gap: 35px 40px
+    @media(max-width: em(768))
+      gap: 15px
     &-item
       display: flex
       align-items: center
-      font-size: rem(22)
       &>.checked
         margin-right: 16px
   &__block-bottom
     margin-top: 34px
-    font-size: rem(20)
+    line-height: 1.5
     &>.scale
       margin: 0 15px
