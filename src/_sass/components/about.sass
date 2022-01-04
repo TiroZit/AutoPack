@@ -38,26 +38,22 @@
   &-slider 
     width: prc(788, 1320)
     height: prc(493, 1320)
+    margin-right: -70px
+    @media(max-width: em(1440))
+      margin-right: auto
     @media(max-width: em(992))
       width: prc(1188, 1320)
       height: prc(793, 1320)
     @media(max-width: em(375))
       display: none
-    &.swiper
-      margin-right: -70px
-      @media(max-width: em(1440))
-        margin-right: auto
-    &__wrapper
-    &__slide
     &__pagination
       left: 30px
       bottom: 30px
     .swiper-pagination-bullet
       width: 100px
       height: 4px
-      border-radius: unset
+      margin: 0 4px
       background: var(--white)
-      opacity: 1
       &.swiper-pagination-bullet-active
         background: var(--orange)
   &__items
@@ -66,7 +62,7 @@
     column-gap: 25px
     margin-top: 60px
     @media(max-width: em(425))
-      grid-template-columns: repeat(auto-fill,minmax(320px,1fr))
+      grid-template-columns: repeat(auto-fill,minmax(300px,1fr))
   &__item
     @include responsive('padding', 28, 10, 0)
     background: #fbfbfb

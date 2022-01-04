@@ -1,0 +1,91 @@
+.services
+  margin-top: 50px
+  &__items 
+    display: grid
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr))
+    gap: 32px
+  &__item 
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    padding: 15px 40px
+    background: #FBFBFB
+    @media(max-width: em(425))
+      padding: 15px
+    &-img
+      border-radius: 50%
+      margin-bottom: 16px
+    &-title 
+      font-size: rem(24)
+      font-weight: 700
+      line-height: 1.17
+      color: var(--black)
+    &-text 
+      margin-top: 12px
+  &-slider 
+    margin-top: 50px
+    width: 100%
+    height: 492px
+    @media(max-width: em(767))
+      display: none
+    &__slide 
+      background-position: center
+      width: 100%
+      height: 439px
+    &__button-prev,
+    &__button-next
+      right: 44px
+      bottom: 0
+      width: 32px
+      height: 32px
+    &__button-next 
+      right: 0
+    &__pagination
+      left: 0
+      bottom: 12px
+    .swiper-pagination-bullet
+      width: 100px
+      height: 4px
+      margin: 0 4px
+      background: #ECEDE7
+      &.swiper-pagination-bullet-active
+        background: var(--orange)
+  &__lists 
+    display: grid
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr))
+    @include responsive('gap', 100, 15, 0)
+    margin: 50px 0
+    @media(max-width: em(425))
+      grid-template-columns: repeat(auto-fill,minmax(300px,1fr))
+  &__list 
+    display: flex
+    flex-direction: column
+    @include responsive('gap', 30, 15, 0)
+    &-item
+      position: relative
+      font-size: rem(20)
+      line-height: 1.5
+      padding-left: 50px
+      margin-left: -50px
+      @media(max-width: em(1200))
+        margin: 0
+        font-size: rem(18)
+      @media(max-width: em(425))
+        font-size: rem(16)
+      &::before
+        display: block
+        content: ''
+        position: absolute
+        left: 0
+        top: 2.5px
+        background-image: url("data:image/svg+xml,%3Csvg fill='%23FF9700' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 16C0 24.8366 7.16344 32 16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 16 0 24.8366 0 16ZM29.0909 16C29.0909 23.2299 23.2299 29.0909 16 29.0909C8.77009 29.0909 2.90909 23.2299 2.90909 16C2.90909 8.77009 8.77009 2.90909 16 2.90909C23.2299 2.90909 29.0909 8.77009 29.0909 16C29.0909 16 29.0909 23.2299 29.0909 16ZM13.6 17.9716L22.0686 9.50294L24.3314 11.7657L13.6 22.4971L7.66863 16.5657L9.93137 14.3029L13.6 17.9716Z'/%3E%3C/svg%3E%0A")
+        fill: #FF9700
+        width: 26px
+        height: 26px
+.service__container
+  margin-top: 50px
+  padding: 0
+  max-width: 1054px
+  &>.btn-submit
+    margin: 0 auto

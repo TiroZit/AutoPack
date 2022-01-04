@@ -1,0 +1,17 @@
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.swiper-button-disabled {
+    cursor: auto;
+    pointer-events: none;
+  }
+}
+
+.swiper-button-lock {
+  display: none;
+}

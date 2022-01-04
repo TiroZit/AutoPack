@@ -38,6 +38,24 @@ const sliderAbout = new Swiper('.about-slider', {
     delay: 5000,
   },
 });
+const sliderServices = new Swiper('.services-slider', {
+  grabCursor: true,
+  loop: true,// Ьесконечный прокрут
+  speed: 500,
+  slidesPerView: '1',// Кол-во слайдов
+  preloadImages: false,// Принудительно загрузить все слайды
+  lazy: {
+    loadPrevNext: true,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
 
 // LAZY-LOADING
 // import lazyLoad from "vanilla-lazyload";

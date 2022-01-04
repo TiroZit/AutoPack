@@ -1,0 +1,43 @@
+section.services 
+  .services__container 
+    h2.services__title Предлагаемые услуги
+    .service__container 
+      .services__items 
+        .services__item 
+          img.services__item-img(src='@img/services/1.jpg', alt='Ламинация',)
+          h3.services__item-title Услуги ламинации бумаги
+          p.services__item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat maximus dictum.
+        .services__item 
+          img.services__item-img(src='@img/services/2.jpg', alt='Ламинация',)
+          h3.services__item-title Флексо печать на ламинированной бумаге
+          p.services__item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat maximus dictum.
+        .services__item 
+          img.services__item-img(src='@img/services/3.jpg', alt='Ламинация',)
+          h3.services__item-title Резка ламинированной бумаги
+          p.services__item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat maximus dictum.
+      .services-slider.swiper
+        .services-slider__wrapper.swiper-wrapper
+          .services-slider__slide.swiper-slide.swiper-lazy(data-background='@img/services/slider/1.jpg')
+          .services-slider__slide.swiper-slide.swiper-lazy(data-background='@img/services/slider/1.jpg')
+          .services-slider__slide.swiper-slide.swiper-lazy(data-background='@img/services/slider/1.jpg')
+        .services-slider__pagination.swiper-pagination
+        .services-slider__button-prev.swiper-button-prev
+          +svg('left', '32', '32', '#FF9700')
+        .services-slider__button-next.swiper-button-next
+          +svg('right', '32', '32', '#FF9700')
+      .services__lists 
+        ul.services__list 
+          li.services__list-item Упаковка продуктов питания: масложировой продукции, мороженного, порционного сахара, специй, сыпучих продуктов
+          li.services__list-item Изготовление одноразовой посуды, стаканчиков, контейнеров для хранения замороженной продукции.
+          li.services__list-item Производство упаковочной продукции для пекарен и точек продажи стрит-фуда.
+          li.services__list-item Для хранения и утилизации медицинских препаратов, таблеток, бинтов (выпускается в виде контейнеров, мешков);
+        ul.services__list 
+          li.services__list-item Основа для пластыря, для этикеток.
+          li.services__list-item Упаковка для косметических средств (влажные салфетки, краска для волос, хна и прочее).
+          li.services__list-item Упаковка для сухих кормов для животных
+          li.services__list-item Изготовление мешков для строительных смесей, древесного угля.
+          li.services__list-item Антикоррозийная упаковка для металлических изделий.
+          li.services__list-item Изготовление транспортировочной упаковки для бумажного производства.
+      a.btn-submit(href="#") 
+        |Оставить заявку
+        +svg('arrow', '20', '14', 'currentColor')
