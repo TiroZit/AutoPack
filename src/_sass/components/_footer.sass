@@ -1,0 +1,35 @@
+.footer
+  margin-top: 50px
+  padding: 40px 0
+  background-color: #2C1D07
+  color: var(--white)
+  &__container
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+    @media(max-width: em(767))
+      flex-direction: column
+      gap: 20px
+  &__logo 
+    color: var(--white)!important
+  &__menu
+    flex-grow: 1
+    margin-left: 70px
+    @media(max-width: em(767))
+      margin-left: 0
+    &-list
+      display: flex
+      align-items: center
+      gap: 50px
+      @media(max-width: em(767))
+        flex-wrap: wrap
+        gap: 20px
+        justify-content: center
+  &__copyright 
+    flex-basis: 100%
+    font-size: rem(12)
+    text-decoration: underline
+    margin-top: 20px
+    line-height: 1.17
+    color: rgba(255, 255, 255, 0.5)
