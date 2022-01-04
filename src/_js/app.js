@@ -56,7 +56,17 @@ const sliderServices = new Swiper('.services-slider', {
     prevEl: '.swiper-button-prev',
   },
 });
-
+const anchors = document.querySelectorAll('a[href*="#"]');
+for (let anchor of anchors){
+  anchor.addEventListener('click', function(e){
+    e.preventDefault();
+    const blockID = anchor.getAttribute('href');
+    document.querySelector(''+blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+}
 // LAZY-LOADING
 // import lazyLoad from "vanilla-lazyload";
 // lazy-loading.lazy();
