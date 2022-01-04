@@ -1,0 +1,31 @@
+section.contacts 
+  .contacts__container 
+    h2.company__title Свяжитесь с нами
+    .contacts__content
+      iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2284.2050978596894!2d61.32557621590438!3d55.074659580377364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c58c2a8345e1c7%3A0x239b22d0ec8b79dc!2z0YPQuy4g0JDRgdGE0LDQu9GM0YLQvdCw0Y8g0YHRgtCw0L3RhtC40Y8sIDgsINCn0LXQu9GP0LHQuNC90YHQuiwg0KfQtdC70Y_QsdC40L3RgdC60LDRjyDQvtCx0LsuLCA0NTQ5MDE!5e0!3m2!1sru!2sru!4v1641303839786!5m2!1sru!2sru' width='660' height='446' style='border:0;' allowfullscreen='' loading='lazy')
+      .contacts__block 
+        .contacts__items 
+          address.contacts__item
+            +svg('gps', '36', '36', '#FF9700')
+            |454901 г. Челябинск, ул. Асфальтная. 8
+          a.contacts__item(href='tel:+73512193932')
+            +svg('call', '36', '32', '#FF9700')
+            |+7 (351) 219-39-32
+          a.contacts__item(href='mailto:extr-lam@auto-pack.ru')
+            +svg('mail', '36', '28', '#FF9700')
+            |extr-lam@auto-pack.ru
+        .contacts__questions
+          |Остались вопросы?
+          br
+          br
+          |Оставьте заявку на обратную связь
+        form.contacts__block-submit 
+          input.contacts__input(name='feedback' type="text" placeholder='Введите Email или телефон' required)
+          button.btn-submit(type='submit') 
+            |Оставить заявку
+            +svg('arrow', '20', '14', 'currentColor')
+        .contacts__agree 
+          |Нажимая на кнопку, вы соглашаетесь с 
+          a(href="#") пользовательским соглашением, политикой конфиденциальности
+          |  и офертой
+
