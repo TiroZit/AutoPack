@@ -258,16 +258,6 @@ h2::after {
   gap: 50px;
 }
 
-.footer__copyright {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  font-size: 0.75rem;
-  text-decoration: underline;
-  margin-top: 20px;
-  line-height: 1.17;
-  color: rgba(255, 255, 255, 0.5);
-}
-
 .header {
   margin: 40px 0;
 }
@@ -650,6 +640,7 @@ h2::after {
 
 .services-slider__slide {
   background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
   height: 439px;
 }
