@@ -13,6 +13,9 @@ if(anchors){
   for (let anchor of anchors){
     anchor.addEventListener('click', function(e){
       e.preventDefault();
+      document.querySelector('.burger').classList.remove('active')
+      document.querySelector('.menu').classList.remove('open');
+      document.body.classList.remove('lock');
       const blockID = anchor.getAttribute('href');
       document.querySelector(''+blockID).scrollIntoView({
         behavior: 'smooth',
