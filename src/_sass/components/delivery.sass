@@ -1,0 +1,47 @@
+.delivery
+  margin-top: rem(50)
+  &__map
+    position: relative
+    background: url("../img/map.png") 0 / contain no-repeat
+    min-height: rem(516)
+    margin-top: rem(50)
+  &__gps
+  &__location
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    &_china
+      top: prc(100, 516)
+      right: prc(300, 1300)
+    transition: all .3s ease 0s
+    color: var(--orange)
+    cursor: pointer
+    &:hover
+      color: #0071D8
+      &> .delivery__location-tooltip
+        opacity: 1
+        visibility: visible
+    &-tooltip
+      padding: 9px 12px 9px 20px
+      transition: all .3s ease 0s
+      position: absolute
+      right: -110px
+      top: calc( 50% - 25px )
+      background-color: #0071D8
+      color: var(--white)
+      font-size: rem(20)
+      line-height: 1.5
+      font-weight: 700
+      opacity: 0
+      visibility: hidden
+      &::before
+        content:''
+        display: block
+        position: absolute
+        top: calc( 50% - 6px )
+        left: -12px
+        border: 6px solid transparent
+        border-right: 6px solid #0071D8
+        width: 12px
+        height: 10px
