@@ -481,7 +481,13 @@ h2::after {
 }
 
 .company__img {
-  width: 522px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 552px;
+          flex: 0 0 552px;
+}
+
+.company__img img {
+  width: 552px;
   height: 325px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1226,6 +1232,11 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 47.9375em) {
+  .company__img {
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+  }
+
   .contacts__block-submit > .btn-submit {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;

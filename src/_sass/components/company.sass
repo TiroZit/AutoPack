@@ -18,9 +18,13 @@
       justify-content: center
       flex-wrap: wrap
   &__img 
-    width: 522px
-    height: 325px
-    object-fit: cover
+    flex: 0 0 552px
+    @media ( max-width: em(767) )
+      flex-shrink: 1
+    img
+      width: 552px
+      height: 325px
+      object-fit: cover
   &__block-text 
     display: flex
     flex-direction: column
