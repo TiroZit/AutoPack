@@ -19,9 +19,9 @@ section.contacts#contacts
           br
           br
           |Оставьте заявку на обратную связь
-        form.contacts__block-submit 
+        form.contacts__block-submit#form-contacts(action='' method='POST')
           input.contacts__input(name='feedback' type="text" placeholder='Введите Email или телефон' required)
-          button.btn-submit(type='submit') 
+          button.btn-submit#btn-contacts(type='submit') 
             |Оставить заявку
             +svg('arrow', '20', '14', 'currentColor')
         .contacts__agree 
