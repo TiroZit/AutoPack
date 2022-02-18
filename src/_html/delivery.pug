@@ -3,6 +3,58 @@ section.delivery#delivery
     h2.delivery__title Доставляем в любую точку планеты
     .delivery__map
       .delivery__location.delivery__location_china
-        .delivery__gps 
+        button.delivery__gps(aria-describedby='tooltip_china')
           +svg('gps', '40', '55', 'currentColor', 'none')
-        .delivery__location-tooltip Китай
+        .delivery__location-tooltip#tooltip_china(role='tooltip') Китай
+      .delivery__location.delivery__location_ukraine
+        button.delivery__gps(aria-describedby='tooltip_ukraine')
+          +svg('gps', '40', '55', 'currentColor', 'none')
+        .delivery__location-tooltip#tooltip_ukraine(role='tooltip') Украина
+      .delivery__location.delivery__location_turkey
+        button.delivery__gps(aria-describedby='tooltip_turkey')
+          +svg('gps', '40', '55', 'currentColor', 'none')
+        .delivery__location-tooltip#tooltip_turkey(role='tooltip') Турция
+      .delivery__location.delivery__location_europe
+        button.delivery__gps(aria-describedby='tooltip_europe')
+          +svg('gps', '40', '55', 'currentColor', 'none')
+        .delivery__location-tooltip#tooltip_europe(role='tooltip') Европа
+      .delivery__location.delivery__location_libya
+        button.delivery__gps(aria-describedby='tooltip_libya')
+          +svg('gps', '40', '55', 'currentColor', 'none')
+        .delivery__location-tooltip#tooltip_libya(role='tooltip') Ливия
+      .delivery__location.delivery__location_egypt
+        button.delivery__gps(aria-describedby='tooltip_egypt')
+          +svg('gps', '40', '55', 'currentColor', 'none')
+        .delivery__location-tooltip#tooltip_egypt(role='tooltip') Египет
+      .delivery__location.delivery__location_thailand
+        button.delivery__gps(aria-describedby='tooltip_thailand')
+          +svg('gps', '40', '55', 'currentColor', 'none')
+        .delivery__location-tooltip#tooltip_thailand(role='tooltip') Тайланд
+      .delivery__location.delivery__location_japan
+        button.delivery__gps(aria-describedby='tooltip_japan')
+          +svg('gps', '40', '55', 'currentColor', 'none')
+        .delivery__location-tooltip#tooltip_japan(role='tooltip') Япония
+      .delivery__location.delivery__location_australia
+        button.delivery__gps(aria-describedby='tooltip_australia')
+          +svg('gps', '40', '55', 'currentColor', 'none')
+        .delivery__location-tooltip#tooltip_australia(role='tooltip') Австралия
+      .delivery__location.delivery__location_usa
+        button.delivery__gps(aria-describedby='tooltip_usa')
+          +svg('gps', '40', '55', 'currentColor', 'none')
+        .delivery__location-tooltip#tooltip_usa(role='tooltip') США
+      .delivery__location.delivery__location_mexico
+        button.delivery__gps(aria-describedby='tooltip_mexico')
+          +svg('gps', '40', '55', 'currentColor', 'none')
+        .delivery__location-tooltip#tooltip_mexico(role='tooltip') Мексика
+      .delivery__location.delivery__location_brazil
+        button.delivery__gps(aria-describedby='tooltip_brazil')
+          +svg('gps', '40', '55', 'currentColor', 'none')
+        .delivery__location-tooltip#tooltip_brazil(role='tooltip') Бразилия
+      .delivery__location.delivery__location_argentine
+        button.delivery__gps(aria-describedby='tooltip_argentine')
+          +svg('gps', '40', '55', 'currentColor', 'none')
+        .delivery__location-tooltip#tooltip_argentine(role='tooltip') Аргентина
+      .delivery__location.delivery__location_chile
+        button.delivery__gps(aria-describedby='tooltip_chile')
+          +svg('gps', '40', '55', 'currentColor', 'none')
+        .delivery__location-tooltip#tooltip_chile(role='tooltip') Чили

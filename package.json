@@ -57,6 +57,7 @@
     "nouislider": "latest",
     "simplebar": "latest",
     "swiper": "latest",
+    "tippy.js": "^6.3.7",
     "vanilla-lazyload": "latest"
   }
 }
