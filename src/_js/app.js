@@ -53,6 +53,3 @@ btnContacts.addEventListener('click', sendComment)
 
 // FOCUS-VISIBLE
 import focusVisible from "focus-visible";
-
-// Подсказки
-import tippy from 'tippy.js';
