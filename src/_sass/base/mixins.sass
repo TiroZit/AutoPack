@@ -1,5 +1,14 @@
-$maxWidth: 1920
+@use 'sass:math'
 $maxWidthContainer: 1320
+// Минимальная ширина страницы
+$minWidth: 320
+// Ширина полотна (макета)
+$maxWidth: 1920
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 1110
+$containerPadding: 20
+$containerWidth: $maxWidthContainer + $containerPadding
+
 @mixin responsive ($property, $startSize, $minSize, $type)
   $addSize: $startSize - $minSize
   @if $type==1
@@ -20,7 +29,35 @@ $maxWidthContainer: 1320
   max-width: #{$max-width}
   padding: 0 #{$padding}
   margin: 0 auto
+@mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $containerWidth, $widthTo: $minWidth, $keepSize: 0)
+  @if ($widthFrom == $containerWidth and $maxWidthContainer == 0)
+    $widthFrom: $maxWidth
+  @if ($minSize <= 0)
+    $minSize: 0.0001
+  @if ($startSize <= 0)
+    $startSize: 0.0001
 
+  // Брейк-поинты в EM
+  $widthFromMedia: em($widthFrom)
+  $widthToMedia: em($widthTo) 
+  // Формула плавающего значения
+  // Источник: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+  $slope: math.div(($startSize - $minSize), ($widthFrom - $widthTo))
+  $yIntersection: -$widthTo * $slope + $minSize
+  $flyValue: #{rem($yIntersection)}" + " #{$slope * 100}vw  
+  // Получение значения свойства
+  $propertyValue: #{"clamp(" rem($minSize) "," $flyValue "," rem($startSize) ")"}
+  // Если отрицательные значения
+  @if ($minSize > $startSize)
+    $propertyValue: #{"clamp(" rem($startSize) "," $flyValue "," rem($minSize) ")"}
+  @if $widthFrom == $containerWidth or $widthFrom == $maxWidth or $keepSize == 1 or $keepSize == 2
+    @media (min-width: $widthFromMedia)
+      #{$property}: rem($startSize)
+  @media (min-width: $widthToMedia) and (max-width: $widthFromMedia)
+    #{$property}: $propertyValue
+  @if $widthTo == $minWidth or $keepSize == 1 or $keepSize == 3
+    @media (max-width: $widthToMedia)
+      #{$property}: rem($minSize)
 // @include burger(35, 20, 992)
 @mixin burger($width, $height, $media-max-width)
   .burger

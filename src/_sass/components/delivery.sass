@@ -1,89 +1,92 @@
 .delivery
-  margin-top: rem(50)
-  &__map
-    position: relative
-    background: url("../img/map.png") 0 / contain no-repeat
-    min-height: rem(516)
+  display: none
+  @media ( min-width: 1100px )
+    display: block
     margin-top: rem(50)
-  &__location
-    display: flex
-    justify-content: center
-    align-items: center
-    position: absolute
-    &_china
-      top: prc(100, 516)
-      right: prc(300, 1300)
-    &_ukraine
-      top: 8.5%
-      right: 36.5%
-    &_turkey
-      top: 16%
-      right: 34%
-    &_europe
-      top: 10%
-      right: 43%
-    &_libya
-      top: 32%
-      right: 43%
-    &_egypt
-      top: 30%
-      right: 38%
-    &_thailand
-      top: 42%
-      right: 18%
-    &_japan
-      top: 35%
-      right: 8%
-    &_australia
-      top: 75%
-      right: 5%
-    &_usa
-      top: 30%
-      right: 80%
-    &_mexico
-      top: 45%
-      right: 78%
-    &_brazil
-      top: 51%
-      right: 66%
-    &_argentine
-      top: 72%
-      right: 70%
-    &_chile
-      top: 80%
-      right: 73%
-    transition: all .3s ease 0s
-    color: var(--orange)
-    cursor: pointer
-    &:hover
-      color: #0071D8
-      &> .delivery__location-tooltip,&::before
-        opacity: 1
-        visibility: visible
-    &-tooltip
-      padding: 9px 12px 9px 20px
-      transition: all .3s ease 0s
+    &__map
+      position: relative
+      background: url("../img/map.png") 0 / contain no-repeat
+      @include adaptiveValue("min-height", 516, 0)
+      margin-top: rem(50)
+    &__location
+      display: flex
+      justify-content: center
+      align-items: center
       position: absolute
-      z-index: 1
-      left: calc( 100% + 30% )
-      top: calc( 50% - 25px )
-      background-color: #0071D8
-      color: var(--white)
-      font-size: rem(20)
-      line-height: 1.5
-      font-weight: 700
-      opacity: 0
-      visibility: hidden
-    &::before
-      content:''
-      display: block
-      position: absolute
+      &_china
+        top: prc(100, 516)
+        right: prc(300, 1300)
+      &_ukraine
+        top: 8.5%
+        right: 36.5%
+      &_turkey
+        top: 16%
+        right: 34%
+      &_europe
+        top: 10%
+        right: 43%
+      &_libya
+        top: 32%
+        right: 43%
+      &_egypt
+        top: 30%
+        right: 38%
+      &_thailand
+        top: 42%
+        right: 18%
+      &_japan
+        top: 35%
+        right: 8%
+      &_australia
+        top: 75%
+        right: 5%
+      &_usa
+        top: 30%
+        right: 80%
+      &_mexico
+        top: 45%
+        right: 78%
+      &_brazil
+        top: 51%
+        right: 66%
+      &_argentine
+        top: 72%
+        right: 70%
+      &_chile
+        top: 80%
+        right: 73%
       transition: all .3s ease 0s
-      top: calc( 50% - 6px )
-      right: -12px
-      border: 6px solid transparent
-      border-right: 6px solid #0071D8
-      width: 12px
-      height: 10px
-      opacity: 0
-      visibility: hidden
+      color: var(--orange)
+      cursor: pointer
+      &:hover
+        color: #0071D8
+        &> .delivery__location-tooltip,&::before
+          opacity: 1
+          visibility: visible
+      &-tooltip
+        padding: 9px 12px 9px 20px
+        transition: all .3s ease 0s
+        position: absolute
+        z-index: 1
+        left: calc( 100% + 30% )
+        top: calc( 50% - 25px )
+        background-color: #0071D8
+        color: var(--white)
+        font-size: rem(20)
+        line-height: 1.5
+        font-weight: 700
+        opacity: 0
+        visibility: hidden
+      &::before
+        content:''
+        display: block
+        position: absolute
+        transition: all .3s ease 0s
+        top: calc( 50% - 6px )
+        right: -12px
+        border: 6px solid transparent
+        border-right: 6px solid #0071D8
+        width: 12px
+        height: 10px
+        opacity: 0
+        visibility: hidden

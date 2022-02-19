@@ -603,149 +603,7 @@ h2::after {
 }
 
 .delivery {
-  margin-top: 3.125rem;
-}
-
-.no-webp .delivery__map {
-  background: url("../img/map.png") 0/contain no-repeat; }
-
-.delivery__map {
-  position: relative;
-  min-height: 32.25rem;
-  margin-top: 3.125rem;
-}
-
-.delivery__location {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  color: var(--orange);
-  cursor: pointer;
-}
-
-.delivery__location_china {
-  top: 19.3798449612%;
-  right: 23.0769230769%;
-}
-
-.delivery__location_ukraine {
-  top: 8.5%;
-  right: 36.5%;
-}
-
-.delivery__location_turkey {
-  top: 16%;
-  right: 34%;
-}
-
-.delivery__location_europe {
-  top: 10%;
-  right: 43%;
-}
-
-.delivery__location_libya {
-  top: 32%;
-  right: 43%;
-}
-
-.delivery__location_egypt {
-  top: 30%;
-  right: 38%;
-}
-
-.delivery__location_thailand {
-  top: 42%;
-  right: 18%;
-}
-
-.delivery__location_japan {
-  top: 35%;
-  right: 8%;
-}
-
-.delivery__location_australia {
-  top: 75%;
-  right: 5%;
-}
-
-.delivery__location_usa {
-  top: 30%;
-  right: 80%;
-}
-
-.delivery__location_mexico {
-  top: 45%;
-  right: 78%;
-}
-
-.delivery__location_brazil {
-  top: 51%;
-  right: 66%;
-}
-
-.delivery__location_argentine {
-  top: 72%;
-  right: 70%;
-}
-
-.delivery__location_chile {
-  top: 80%;
-  right: 73%;
-}
-
-.delivery__location:hover {
-  color: #0071D8;
-}
-
-.delivery__location:hover > .delivery__location-tooltip,
-.delivery__location:hover::before {
-  opacity: 1;
-  visibility: visible;
-}
-
-.delivery__location-tooltip {
-  padding: 9px 12px 9px 20px;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  position: absolute;
-  z-index: 1;
-  left: 130%;
-  top: calc(50% - 25px);
-  background-color: #0071D8;
-  color: var(--white);
-  font-size: 1.25rem;
-  line-height: 1.5;
-  font-weight: 700;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.delivery__location::before {
-  content: "";
-  display: block;
-  position: absolute;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  top: calc(50% - 6px);
-  right: -12px;
-  border: 6px solid transparent;
-  border-right: 6px solid #0071D8;
-  width: 12px;
-  height: 10px;
-  opacity: 0;
-  visibility: hidden;
+  display: none;
 }
 
 .services {
@@ -1106,6 +964,160 @@ button.swiper-pagination-bullet {
 
 /* Auto Height */
 
+@media (min-width: 1100px) {
+  .delivery {
+    display: block;
+    margin-top: 3.125rem;
+  }
+
+  .no-webp .delivery__map {
+    background: url("../img/map.png") 0/contain no-repeat; }
+
+  .delivery__map {
+    position: relative;
+    margin-top: 3.125rem;
+  }
+
+  .delivery__location {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    color: var(--orange);
+    cursor: pointer;
+  }
+
+  .delivery__location_china {
+    top: 19.3798449612%;
+    right: 23.0769230769%;
+  }
+
+  .delivery__location_ukraine {
+    top: 8.5%;
+    right: 36.5%;
+  }
+
+  .delivery__location_turkey {
+    top: 16%;
+    right: 34%;
+  }
+
+  .delivery__location_europe {
+    top: 10%;
+    right: 43%;
+  }
+
+  .delivery__location_libya {
+    top: 32%;
+    right: 43%;
+  }
+
+  .delivery__location_egypt {
+    top: 30%;
+    right: 38%;
+  }
+
+  .delivery__location_thailand {
+    top: 42%;
+    right: 18%;
+  }
+
+  .delivery__location_japan {
+    top: 35%;
+    right: 8%;
+  }
+
+  .delivery__location_australia {
+    top: 75%;
+    right: 5%;
+  }
+
+  .delivery__location_usa {
+    top: 30%;
+    right: 80%;
+  }
+
+  .delivery__location_mexico {
+    top: 45%;
+    right: 78%;
+  }
+
+  .delivery__location_brazil {
+    top: 51%;
+    right: 66%;
+  }
+
+  .delivery__location_argentine {
+    top: 72%;
+    right: 70%;
+  }
+
+  .delivery__location_chile {
+    top: 80%;
+    right: 73%;
+  }
+
+  .delivery__location:hover {
+    color: #0071D8;
+  }
+
+  .delivery__location:hover > .delivery__location-tooltip,
+  .delivery__location:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .delivery__location-tooltip {
+    padding: 9px 12px 9px 20px;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    position: absolute;
+    z-index: 1;
+    left: 130%;
+    top: calc(50% - 25px);
+    background-color: #0071D8;
+    color: var(--white);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    font-weight: 700;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .delivery__location::before {
+    content: "";
+    display: block;
+    position: absolute;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    top: calc(50% - 6px);
+    right: -12px;
+    border: 6px solid transparent;
+    border-right: 6px solid #0071D8;
+    width: 12px;
+    height: 10px;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 1100px) and (min-width: 70.625em) {
+  .delivery__map {
+    min-height: 32.25rem;
+  }
+}
+
 @media (max-width: 90em) {
   .about-slider {
     margin-right: 0;
@@ -1386,4 +1398,19 @@ button.swiper-pagination-bullet {
   }
 }
 
-.webp .delivery__map { background: url(../img/map.webp) 0/contain no-repeat; }
+@media (min-width: 1100px) and (min-width: 20em) and (max-width: 70.625em) {
+  .delivery__map {
+    min-height: clamp( 0.00000625rem , -12.7407320216rem  +  63.703691358vw , 32.25rem );
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 20em) {
+  .delivery__map {
+    min-height: 0.00000625rem;
+  }
+}
+
+@media (min-width: 1100px) {
+
+  .webp .delivery__map { background: url(../img/map.webp) 0/contain no-repeat; }
+}
