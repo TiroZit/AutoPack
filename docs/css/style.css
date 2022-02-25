@@ -647,6 +647,7 @@ h2::after {
 
 .services__item-text {
   margin-top: 12px;
+  width: 300px;
 }
 
 .services-slider {
