@@ -28,36 +28,35 @@ if(anchors){
 // Отправка формы
 const btnContacts = document.getElementById("btn-contacts");
 const formContacts = document.getElementById("form-contacts");
-async function sendComment(e) {
-   // Отменяем поведение по умолчанию - отправка формы
-    e.preventDefault();
-   // Собрать данные с формы
-    const data = new FormData(formContacts);
-   // Отправляем запрос на сервер
-    return fetch("contacts.php", {
-      method: "POST", // Метод отправки запрос
-      body: data, // Данные с формы
-    }).then(response => {
-        if(response.ok) {
-            let t = btnContacts.textContent;
-            navigator.clipboard.writeText(t).then(() => {
-                (btnContacts.innerHTML = "Заявка отправлена!"),
-                    setTimeout(
-                        () =>
-                            (btnContacts.innerHTML =
-                                t +
-                                `<svg class="arrow" style="width: 20px; height: 14px; fill: currentColor;"> 
-          <use xlink:href="<?=$nc_parent_template_folder_path; ?>img/icons/icons.svg#arrow"></use>
-        </svg>`),
-                        3000
-                    );
-            });
-            return response.json();
-        }
-        formContacts.reset();
-    });
+async function sendMail(e) {
+  // Отменяем поведение по умолчанию - отправка формы
+  e.preventDefault();
+  // Отправляем запрос на сервер
+  const response = await fetch("sendmail.php", {
+    method: "POST", // Метод отправки запрос
+    body: FormData(formContacts), // Данные с формы
+  });
+  if(response.ok) {
+    const data = await response.json();
+    if(data.status == success){
+      let t = btnContacts.textContent;
+      navigator.clipboard.writeText(t).then(() => {
+          (btnContacts.innerHTML = "Заявка отправлена!"),
+              setTimeout(
+                  () =>
+                      (btnContacts.innerHTML =
+                          t +
+                          `<svg class="arrow" style="width: 20px; height: 14px; fill: currentColor;"> 
+    <use xlink:href="<?=$nc_parent_template_folder_path; ?>img/icons/icons.svg#arrow"></use>
+  </svg>`),
+                  3000
+              );
+      });
+      formContacts.reset();
+    }
+  }
 }
-btnContacts.addEventListener("click", sendComment);
+formContacts.addEventListener("submit", sendMail);
 
 // FOCUS-VISIBLE
 import focusVisible from "focus-visible";
