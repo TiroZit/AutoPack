@@ -19,7 +19,7 @@ section.contacts#contacts
           br
           br
           |Оставьте заявку на обратную связь
-        form.contacts__block-submit#form-contacts(action='' method='POST')
+        form.contacts__block-submit#form-contacts(action='sendmail.php' method='POST')
           input.contacts__input(name='feedback' type="text" placeholder='Введите Email или телефон' required)
           button.btn-submit#btn-contacts(type='submit') 
             |Оставить заявку

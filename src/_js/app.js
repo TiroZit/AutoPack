@@ -31,26 +31,23 @@ const formContacts = document.getElementById("form-contacts");
 async function sendMail(e) {
   // Отменяем поведение по умолчанию - отправка формы
   e.preventDefault();
+  const data = new FormData(formContacts);
   // Отправляем запрос на сервер
   const response = await fetch("sendmail.php", {
     method: "POST", // Метод отправки запрос
-    body: FormData(formContacts), // Данные с формы
+    body: data, // Данные с формы
   });
-  if(response.ok) {
-    const data = await response.json();
-    if(data.status == success){
+  if (response.ok) {
+    const result = await response.json();
+    if (result.status == "success") {
       let t = btnContacts.textContent;
       navigator.clipboard.writeText(t).then(() => {
-          (btnContacts.innerHTML = "Заявка отправлена!"),
-              setTimeout(
-                  () =>
-                      (btnContacts.innerHTML =
-                          t +
-                          `<svg class="arrow" style="width: 20px; height: 14px; fill: currentColor;"> 
-    <use xlink:href="<?=$nc_parent_template_folder_path; ?>img/icons/icons.svg#arrow"></use>
-  </svg>`),
-                  3000
-              );
+        (btnContacts.innerHTML = "Заявка отправлена!"),
+        setTimeout(
+          () =>
+          (btnContacts.innerHTML =
+            t +`<svg class="arrow" style="width: 20px; height: 14px; fill: currentColor;"><use xlink:href="<?=$nc_parent_template_folder_path; ?>img/icons/icons.svg#arrow"></use></svg>`),3000
+        );
       });
       formContacts.reset();
     }
