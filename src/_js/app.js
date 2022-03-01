@@ -40,15 +40,10 @@ async function sendMail(e) {
   if (response.ok) {
     const result = await response.json();
     if (result.status == "success") {
-      let t = btnContacts.textContent;
-      navigator.clipboard.writeText(t).then(() => {
-        (btnContacts.innerHTML = "Заявка отправлена!"),
-        setTimeout(
-          () =>
-          (btnContacts.innerHTML =
-            t +`<svg class="arrow" style="width: 20px; height: 14px; fill: currentColor;"><use xlink:href="/netcat_template/template/autopack_tpl/img/icons/icons.svg#arrow"></use></svg>`),3000
-        );
-      });
+      formContacts.classList.add('_sending');
+      setTimeout(()=>{
+        formContacts.classList.remove('_sending')
+      }, 3000)
       formContacts.reset();
     }
   }
