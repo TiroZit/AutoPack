@@ -46,7 +46,7 @@ async function sendMail(e) {
         setTimeout(
           () =>
           (btnContacts.innerHTML =
-            t +`<svg class="arrow" style="width: 20px; height: 14px; fill: currentColor;"><use xlink:href="<?=$nc_parent_template_folder_path; ?>img/icons/icons.svg#arrow"></use></svg>`),3000
+            t +`<svg class="arrow" style="width: 20px; height: 14px; fill: currentColor;"><use xlink:href="/netcat_template/template/autopack_tpl/img/icons/icons.svg#arrow"></use></svg>`),3000
         );
       });
       formContacts.reset();
