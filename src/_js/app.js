@@ -33,7 +33,7 @@ async function sendMail(e) {
   e.preventDefault();
   const data = new FormData(formContacts);
   // Отправляем запрос на сервер
-  const response = await fetch("sendmail.php", {
+  const response = await fetch(formContacts.action, {
     method: "POST", // Метод отправки запрос
     body: data, // Данные с формы
   });
