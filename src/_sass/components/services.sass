@@ -28,13 +28,16 @@
     margin-top: 50px
     width: 100%
     height: 492px
-    @media(max-width: em(767))
-      display: none
+    @media(max-width: em(425))
+      height: 292px
     &__slide 
       background-position: center
+      background-size: cover
       background-repeat: no-repeat
       width: 100%
       height: 439px
+      @media(max-width: em(425))
+        height: 239px
     &__button-prev,
     &__button-next
       right: 44px
@@ -46,6 +49,8 @@
     &__pagination
       left: 0
       bottom: 12px
+      @media(max-width: em(425))
+        display: none
     .swiper-pagination-bullet
       width: 100px
       height: 4px
