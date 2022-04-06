@@ -1380,6 +1380,15 @@ button.swiper-pagination-bullet {
     font-size: 2rem;
   }
 
+  .about-slider__pagination {
+    left: 15px;
+    bottom: 15px;
+  }
+
+  .about-slider .swiper-pagination-bullet {
+    width: 50px;
+  }
+
   .about__items {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
@@ -1431,12 +1440,6 @@ button.swiper-pagination-bullet {
 
   .services__list-item {
     font-size: 1rem;
-  }
-}
-
-@media (max-width: 23.4375em) {
-  .about-slider {
-    display: none;
   }
 }
 

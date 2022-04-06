@@ -44,8 +44,6 @@
     @media(max-width: em(992))
       width: prc(1188, 1320)
       height: prc(793, 1320)
-    @media(max-width: em(375))
-      display: none
     &__slide
       img
         width: 100%
@@ -54,11 +52,16 @@
     &__pagination
       left: 30px
       bottom: 30px
+      @media(max-width: em(425))
+        left: 15px
+        bottom: 15px
     .swiper-pagination-bullet
       width: 100px
       height: 4px
       margin: 0 4px
       background: var(--white)
+      @media(max-width: em(425))
+        width: 50px
       &.swiper-pagination-bullet-active
         background: var(--orange)
   &__items
